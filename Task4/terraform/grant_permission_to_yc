@@ -1,0 +1,31 @@
+#!/bin/bash
+
+yc resource-manager folder add-access-binding \
+  --id $YC_FOLDER_ID \
+  --role editor \
+  --service-account-id $SA_ID
+
+yc resource-manager folder add-access-binding \
+  --id $YC_FOLDER_ID \
+  --role resource-manager.clouds.owner \
+  --service-account-id $SA_ID
+
+yc resource-manager folder add-access-binding \
+  --id $YC_FOLDER_ID \
+  --role serverless-containers.admin  \
+  --service-account-id $SA_ID
+
+yc resource-manager folder add-access-binding \
+  --id $YC_FOLDER_ID \
+  --role vpc.admin \
+  --service-account-id $SA_ID
+
+yc resource-manager folder add-access-binding \
+  --id $YC_FOLDER_ID \
+  --role compute.admin \
+  --service-account-id $SA_ID
+
+yc resource-manager folder add-access-binding \
+  --id $YC_FOLDER_ID \
+  --role vpc.securityGroups.admin \
+  --service-account-id $SA_ID

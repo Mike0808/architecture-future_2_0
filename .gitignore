@@ -1,0 +1,5 @@
+terraform_min
+.terraform*
+*.hcl
+*.tfstate*
+key.json
